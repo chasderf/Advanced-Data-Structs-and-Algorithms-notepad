@@ -1,0 +1,61 @@
+10.3 MAXIMUM MATCHING IN BIPARTITE GRAPHS
+
+In many situations we are faced with a problem of pairing elements of two sets. The traditional example is boys and girls for a dance, but you can easily think of more serious applications. It is convenient to represent elements of two given sets by vertices of a graph, with edges between vertices that can be paired. A matching in a graph is a subset of its edges with the property that no two edges share a vertex. A maximum matching~more precisely, a maximum cardinality matching-is a matching with the largest number of edges. (What is it for the graph
+in Figure 10.8? Is it unique?) The maximum-matching problem is the problem of finding a maximum matching in a given graph. For an arbitrary graph, this is a rather difficult problem. It was solved in 1965 by Jack Edmonds [Edm65]. (See [Gal86] for a good survey and more recent references.) 
+
+We limit our discussion in this section to the simpler case of bipartite graphs. In
+a bipartite graph, all the vertices can be partitioned into two disjoint sets V and U, not necessarily of the same size, so that every edge connects a vertex in one of these sets to a vertex in the other set. In other words, a graph is bipartite if its vertices can be colored in two colors so that every edge has its vertices colored in different colors; such graphs are also said to be 2-colorable. The graph in Figure 10.8 is
+bipartite. It is not difficult to prove that a graph is bipartite if and only if it does not have a cycle of an odd length. We will assume for the rest of this section that the vertex set of a given bipartite graph has been already partitioned into sets V and U as required by the definition.
+
+Let us try to apply the iterative-improvement technique to the maximumcardinality-matching problem. Let M be a matching in a bipartite graph G = (V, U, E). How can we improve it, i.e., find a new matching with more edges? Obviously, if every vertex in either V or U is matched (has a mate), i.e., serves as an endpoint of an edge in M, this cannot be done and M is a maximum matching. Therefore, to have a chance at improving the current matching, both V and U must contain unmatched (also called free) vertices, i.e., vertices that are not incident to
+any edge in M. For example, for the matching Ma = {(4, 8), (5, 9)) in the graph of Figure 10.9a, vertices 1, 2, 3, 6, 7, and 10 are free, while vertices 4, 5, 8, and 9 are matched. 
+
+THEOREM A matching M is maximal if and only if there exists no augmenting path with respect to M. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

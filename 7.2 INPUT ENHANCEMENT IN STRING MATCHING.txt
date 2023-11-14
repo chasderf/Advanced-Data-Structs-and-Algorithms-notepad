@@ -1,0 +1,100 @@
+7.2 INPUT ENHANCEMENT IN STRING MATCHING
+
+Horspool's Algorithm
+
+Consider, as an example, searching for the pattern BARBER in some text:
+
+B A R B E R
+
+ 
+Starting with the last R of the pattern and moving right to left, we compare the corresponding pairs of characters in the pattern and the text. If all the pattern's characters match successfully, a matching substring is found. (Then the search can be either stopped altogether or continued if another occurrence of the same pattern is desired.) If, however, we encounter a mismatch, we need to shift the pattern to the right. Clearly, we would like to make as large a shift as possible without risking the possibility of missing a matching substring in the text. Horspool's algorithm determines the size of such a shift by looking at the character c of the text that was aligned against the last character of the pattern. In general, the following four possibilities can occur. 
+
+ALGORITHM ShiftTable(P[O .. m - 1])
+//Fills the shift table used by Horspool's and Boyer-Moore algorithms
+//Input: Pattern P[O .. m -1] and an alphabet of possible characters
+//Output: Table[O .. size - 1] indexed by the alphabet's characters and
+II filled with shift sizes computed by formula (7.1)
+initialize all the elements of Table with m
+for j <-- 0 tom- 2 do Table[ P[j]] <-- m -1- j
+return Table 
+
+
+
+Horspool's algorithm
+
+Step 1 For a given pattern of length m and the alphabet used in both the
+pattern and text, construct the shift table as described above.
+Step 2 Align the pattern against the beginning of the text.
+Step 3 Repeat the following until either a matching substring is found or the pattern reaches beyond the last character of the text. Starting with the last character in the pattern, compare the corresponding characters in the pattern and text until either all m characters are matched (then stop) or a mismatching pair is encountered. In the latter case, retrieve the entry t(c) from the c's column of the shift table where cis the text's character currently aligned against the last character of the pattern, and shift the pattern by t(c) characters to the right along the text.
+
+Here is a pseudocode of Horspool's algorithm.
+
+ALGORITHM HorspoolMatching(P[O .. m -1], T[O .. n -1])
+//Implements Horspool's algorithm for string matching
+//Input: Pattern P[O .. m -1] and text T[O .. n -1]
+//Output: The index of the left end of the first matching substring
+II or -1 if there are no matches
+ShiftTable(P[O .. m - 1]) //generate Table of shifts
+i ~ m - 1 //position of the pattern's right end
+while i :5: n - 1 do
+k ~ 0 //number of matched characters
+while k s m- 1 and P[m- 1- k] = T[i- k] do
+k ~k+1
+ifk =m
+retnrni-m+l
+else i ~ i+Table[T[i]]
+return -1 
+
+
+Boyer-Moore Algorithm
+Now we outline the Boyer-Moore algorithm itself. If the first comparison of the rightmost character in the pattern with the corresponding character c in the text fails, the algorithm does exactly the same thing as Horspool's algorithm. Namely, it shifts the pattern to the right by the number of characters retrieved from the table precomputed as explained earlier. 
+
+
+The Boyer-Moore algorithm
+Step 1 For a given pattern and the alphabet used in both the pattern and the text, construct the bad-symbol shift table as described earlier.
+Step 2 Using the pattern, construct the good-suffix shift table as described.
+Step 3 Align the pattern against the beginning of the text.
+Step 4 Repeat the following step until either a matching substring is found or the pattern reaches beyond the last character of the text. Starting with the last character in the pattern, compare the corresponding characters in the pattern and the text until either all m character pairs are matched (then stop) or a mismatching pair is encountered after k 2: 0 character pairs are matched successfully. In the latter case, retrieve the entry t1 (c) from the c's column of the bad-symbol table where cis the text's mismatched character. If k > 0, also retrieve the corresponding d2 entry from the good-suffix table. Shift the pattern to the right by the number of positions computed by the formula.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

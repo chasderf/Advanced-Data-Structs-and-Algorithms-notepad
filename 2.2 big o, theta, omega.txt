@@ -1,0 +1,54 @@
+2.2 ASYMPTOTIC NOTATIONS AND BASIC EFFICIIENCY CLASSES
+
+The efficiency analysis framework concentrates on the order of growth of an algorithms basic operation count as the principal indicator of the algorithms efficiency. To compare and rank such orders of growth, we use three notations: O (big oh), \omega (big omega), and \theta (big theta). First we introduce these notations informally, and then after several examples, formal defintions are given. In the following discussion, t(n) and g(n) can be any nonnegative functions defined on the set of natural numbers. In the context we are interested in, t(n) will be an algorithms running time (usually indicated by its basic operation count C(n)) and g(n) will be some simple function to compare the count with.
+
+INFORMAL INTRODUCTION
+
+Informally, 0 (g(n)) is the set of all functions with a smaller or same order of growth as g(n) (to within a constant multiple, as n goes to infinity).
+
+The second notation, \Omega(g(n)), stands for the set of all functions with a larger or same order of growth as g(n) (to within a constant multiple, as n goes to infinity)
+
+Finally, \theta(g(n)) is the set of all functions that have the same order of growth as g(n) (to within a constant multiple, as n goes to infinity). Thus, every quadratic function an^2 + bn + c with a > 0 is in \theta(n^2), but so are, among infinitely many others, n^2 +sin nand n^2 +log n.
+
+ O-notation
+DEFINITION 1 A function t(n) is said to be in O(g(n)), denoted t(n) Element of O(g(n)), if t(n) is bounded above by some constant multiple of g(n) for all large n.
+
+Omega-notation
+DEFINITION 2 A function t(n) is said to be in \omega (g(n)). denoted t(n) Element \omega (g(n)), if t(n) is bounded below by some positive constant multiple of g(n) for all large n. 
+
+
+Theta-notation
+DEFINITION 3 A function t(n) is said to be in Theta(g(n)), denoted t(n) Element of theta(g(n)), if t(n) is bounded both above and below by some positive constant multiples of g(n) for all large n.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

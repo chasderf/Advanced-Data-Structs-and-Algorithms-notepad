@@ -1,0 +1,51 @@
+7.1 SORTING BY COUNTING
+
+As a first example of applying the input enhancement technique, we discuss its application to the sorting problem. One rather obvious idea is to count, for each element of a list to be sorted, the total number of elements smaller than this element and record the results in a table. These numbers will indicate the positions of the elements in the sorted list: e.g., if the count is 10 for some element, it should be in the 11th position (with index 10, if we start counting with 0) in the sorted array. Thus, we will be able to sort the list by simply copying its elements to their appropriate positions in a new, sorted list. This algorithm is called comparison counting sort.
+
+
+
+AlGORITHM ComparisonCountingSort(A[O .. n - 1])
+//Sorts an array by comparison counting
+//Input: An array A[O .. n - 1] of orderable elements
+//Output: Array S[O .. n - 1] of A's elements sorted in non decreasing order
+fori <-- 0 ton - 1 do Count[i] <-- 0
+for i <-- 0 to n - 2 do
+for j <-- i + 1 to n - 1 do
+if A(i] < A[Jl
+Count[}] <-- Count[}]+ 1
+else Count[i] <-- Count[i] + 1
+fori +- 0 ton - 1 do S[ Count[i]] <-- A[i]
+returnS 
+
+What is the time efficiency of this algorithm? It should be quadratic because the algorithm considers all the different pairs of ann-element array. More formally, the number of times its basic operation, the comparison A[i] < A[j], is executed is equal to the sum we have encountered several times already.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

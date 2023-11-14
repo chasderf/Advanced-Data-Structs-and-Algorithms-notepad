@@ -1,0 +1,46 @@
+CH 9 GREEDY TECHNIQUE
+
+-Feasible, i.e. it has to satisfy the problems constraints
+
+-Locally optimal, i.e. it has to be the best local choice among all feasible choices available on that step
+
+-irrevocable, i.e., once made, it cannot be changed on subsequent steps of the algorithm 
+
+These requirements explain the technique's name: on each step, it suggests
+a "greedy" grab of the best alternative available in the hope that a sequence of locally optimal choices will yield a (globally) optimal solution to the entire problem. We refrain from a philosophical discussion of whether greed is good or bad. (If you have not seen the movie from which the chapter's epigraph is taken, its hero did not end up well.) From our algorithmic perspective, the question is whether a greedy strategy works or not. As we shall see, there are problems for which a sequence of locally optimal choices does yield an optimal solution for every instance of the problem in question. However, there are others for which this is not the case; for such problems, a greedy algorithm can still be of value if we are interested in or have to be satisfied with an approximate
+solution. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a

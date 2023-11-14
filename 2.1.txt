@@ -1,0 +1,68 @@
+2.1 Analysis Framework
+
+In Section 2.2, we introduce three notations: 0 ("big oh"), Q ("big omega"), and ("big theta"). Borrowed from mathematics, these notations have become the language for discussing an algorithm's efficiency. 
+
+To begin with, there are two kinds of efficiency: time efficiency and space efficiency deals with the extra space the algorithm requires. In the early days of electronic computing, both resources -- time and space 00 were at a premium. 
+
+MEASURING AN INPUTS SIZE
+Lets start with the obvious observation that almost all algorithms run longer on larger inputs. For example it takes longer to sort larger arrays, multiply larger matrices and so on. Therefor it is logical to investigate an algorithms efficiency as a function of some parameter n incdicating the algorithms input size. 
+
+UNITS FOR MEASURING RUNNING TIME
+OF course we can use some standard unit of time measurement -- a second, a milisecond, and so on -- to measure the running time of a program implementing the algorithm. There are obvious drawbacks to such an approach, however; dependence on the speed of a particular computer, dependence on the quality of a program implementing the algorithm and the compiler used in generating the machine code, and the difficulty of clocking the actual running time of the program. Since we are after a measure of an algorithms efficiency, we would like to have a metric that does not depend on these extra factors.
+
+The thing to do is to identify the most important operation of the algorithm, called the basic operation, the operation contributing the most to the total running time and compute the number of times the basic operation is executed.
+
+ORDERS OF GROWTH
+
+Why this emphasis on the ecounts order of growth for large input sizes? A difference in running times on small inputs is not what really distinguishes efficient algorithms from inefficient ones. When we have to compute, for example, the greatest common divisor of two small numbers, it is not innnediately clear how much more efficient Euclid's algorithm is compared to the other two algorithms discussed in Section 1.1 or even why we should care which of them is faster and by how much. It is only when we have to find the greatest common divisor of two
+large numbers that the difference in algorithm efficiencies  becomes both clear and important.  
+
+
+WORST CASE BEST CASE AND AVERAGE CASE EFFICIENCIES
+
+
+
+In the beginning of this chapter, we discussed that it is reasonable to measure an algorithm's efficiency as a function of a parameter indicating the size of the algorithm's input. But there are many algorithms for which running time depends not only on an input size but also on the specifics of a particular input. 
+
+The worst-case efficiency of an algorithm is its efficiency for the worst-case input of size n, which is an input (or inputs) of size n for which the algorithm runs the longest among all possible inputs of that size. The way to determine the worst-case efficiency of an algorithm is, in principle, quite straightforward: we analyze the algorithm to see what kind of inputs yield the largest value of the basic operation's count C(n) among all possible inputs of size nand then compute this
+worst-case value Cworst(n). (For sequential search, the answer was obvious. The methods for handling less trivial situations are explained in subsequent sections of this chapter.) Clearly, the worst-case analysis provides very important information about an algorithm's efficiency by bounding its running time from above. In other
+words, it guarantees that for any instance of size n, the running time will not exceed Cworst(n), its running time on the worst-case inputs. 
+
+The best-case efficiency of an algorithm is its efficiency for the best-case input of size n, which is an input (or inputs) of size n for which the algorithm runs the fastest among all possible inputs of that size. Accordingly, we can analyze the bestcase efficiency as follows. First, we determine the kind of inputs for which the count
+C(n) will be the smallest among all possible inputs of size n. (Note that the best case does not mean the smallest input; it means the input of size n for which the algorithm runs the fastest.) Then we ascertain the value of C (n) on these most convenient inputs. For example, for sequential search, best-case inputs are lists of size n with their first elements equal to a search key; accordingly, Cbw(n) = 1.
+
+It should be clear from our discussion, however, that neither the worst-case analysis nor its best -case counterpart yields the necessary information about an algorithm's behavior on a "typical" or "random" input. This is the information that the average-case efficiency seeks to provide. To analyze the algorithm's average-case efficiency, we must make some assumptions about possible inputs of size n. 
+
+
+RECAPITULATION OF THE ANALYSIS FRAMEWORK
+
+-Both time and space efficiencies are measures as functions of the algorithms input size
+
+-Time efficiency is meausred by counting the number of times the algorithms basic operation is executed. Space efficiency is measured by counting the number of extra memory units consumed by the algorithm
+
+-The efficiencies of some algorithms may differ significantly for inputs of the same size. For such algorithms, we need to distinguish between the worst case, average case, and best case efficiencies
+
+-The frameworks primary interest lies in the order of growth of the algorithms running time (extra memory units consumed) as its input size goes to infinity
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

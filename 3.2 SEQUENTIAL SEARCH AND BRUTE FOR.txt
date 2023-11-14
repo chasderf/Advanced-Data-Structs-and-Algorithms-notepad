@@ -1,0 +1,84 @@
+3.2 SEQUENTIAL SEARCH AND BRUTE FORCE STRING MATCHING
+
+SEQUENTIAL SEARCH
+
+We have already encountered a brute-force algorithm for the general searching problem: it is called sequential search (see Section 2.1). To repeat, the algorithm simply compares successive elements of a given list with a given search key until either a match is encountered (successful search) or the list is exhausted without finding a match (unsuccessful search). A simple extra trick is often employed in
+implementing sequential search: if we append the search key to the end of the list, the search for the key will have to be successful, and therefore we can eliminate a check for the list's end on each iteration of the algorithm. Here is a pseudocode for this enhanced version, with its input implemented as an array. 
+
+AlGORITHM Sequentia!Search2(A[O .. n ], K)
+//Implements sequential search with a search key as a sentinel
+//Input: An array A of n elements and a search key K
+//Output: The index of the first element in A[O .. n -1) whose value is
+II equal to K or -1 if no such element is found
+A[n]<---K
+i~O
+while A[i] i' K do
+i<---i+l
+if i < n return i
+else return -1 
+
+BRUTE-FORCE STRING MATCHING
+Recall the string-matching problem introduced in Section 1.3: given a string of n characters called the text and a string of m characters (m <= n) called the pattern, find a substring of the text that matches the pattern. 
+
+BRUTE-FORCE STRING MATCHING
+Recall the string-matching problem introduced in Section 1.3: given a string of n characters called the text and a string of m characters (m <= n) called the pattern, find a substring of the text that matches the pattern.
+
+
+ALGORITHM BruteForceStringMatch(T[O .. n -1]. P[O .. m -1])
+//Implements brute-force string matching
+//Input: An array T[0 .. 11 - 1] of 11 characters representing a text and
+II an array P[O .. m - 1] of m characters representing a pattern
+//Output: The index of the first character in the text that starts a
+II matching substring or -1 if the search is unsuccessful 
+
+for i +<- O to n-mdo
+j+<-0
+while j < m and P(j] = T[i + j] do
+j <- j+1
+if j = m return i
+return -1 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

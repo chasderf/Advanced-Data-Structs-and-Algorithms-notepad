@@ -1,0 +1,98 @@
+5.2 DEPTH-FIRST SEARCH AND BREADTH-FIRST SEARCH
+
+During the next two sections of this chapter, we will deal with very important graph algorithms that can be viewed as applications of the decrease by one technique. We assume familiarity with the notion of a graph, its main varieties (undirected, directed, and weighted graphs), the two principal representations of a graph (adjacency matrix and adjacency lists), and such notions as graph connectivity and
+acyclicity.
+
+DEPTH FIRST SEARCH 
+
+Depth first search starts visiting vertices of a graph at an arbitrary vertex by marking it as having been visited. On each iteration, the algorithm proceeds to an unvisited vertex that is adjacent to the one it is currently in. (If there are several such vertices. a tie can be resolved arbitrarily. As a practical matter, which of the adjacent unvisited candidates is chosen is dictated by the data structure
+representing the graph. In our examples, we will always break ties by the alphabetical order of the vertices.) This process continues until a dead end-a vertex with no adjacent unvisited vertices-is encountered. At a dead end, the algorithm backs up one edge to the vertex it came from and tries to continue visiting unvisited vertices from there. The algorithm eventually halts after backing up to the starting vertex, with the latter being a dead end. By then, all the vertices in
+the same connected component as the starting vertex have been visited. If unvisited vertices still remain, the depth-first search must be restarted at any one of them. 
+
+It is convenient to use a stack to trace the operation of depth-first search. We push a vertex onto the stack when the vertex is reached for the first time (i.e., the visit of the vertex starts), and we pop a vertex off the stack when it becomes a dead end (i.e., the visit of the vertex ends). 
+
+It is also very useful to accompany a depth-first search traversal by constructing the so-called depth-first search forest. The traversal's starting vertex serves as the root of the first tree in such a forest. Whenever a new unvisited vertex is reached for the first time, it is attached as a child to the vertex from which it is being reached. Such an edge is called a tree edge because the set of all such edges forms
+a forest. The algorithm may also encounter an edge leading to a previously visited vertex other than its immediate predecessor (i.e., its parent in the tree). Such an edge is called a back edge because it connects a vertex to its ancestor, other than the parent, in the depth-first search forest. Figure 5.5 provides an example of a depth-first search traversal, with the traversal's stack and corresponding depthfirst search forest shown as well. 
+
+Here is a pseudocode of the depth-first search. 
+
+
+ALGORITHM DFS(G)
+//Implements a depth-first search traversal of a given graph
+//Input: Graph G = (V, E)
+//Output: Graph G with its vertices marked with consecutive integers
+//in the order they've been first encountered by the DFS traversal 
+mark each vertex in V with 0 as a mark of being "unvisited"
+count+--- 0
+for each vertex v in V do
+if v is marked with 0
+dfs(v)
+dfs(v)
+//visits recursively all the unvisited vertices connected to vertex v hy a path
+//and numbers them in the order they are encountered
+//via global variable count
+count +---count + 1; mark v with count
+for each vertex w in V adjacent to v do
+if w is marked with 0
+df<(w) 
+
+----------------------------------------------------------------------
+
+BREADTH-FIRST SEARCH
+
+If depth-first search is a traversal for the brave (the algorithm goes as far from "home" as it can), breadth-first search is a traversal for the cautious. It proceeds in a concentric manner by visiting first all the vertices that are adjacent to a starting vertex, then all unvisited vertices two edges apart from it, and so on, until all the vertices in the same connected component as the starting vertex are visited. If there still remain unvisited vertices, the algorithm has to be restarted at an arbitrary vertex of another connected component of the graph. 
+
+It is convenient to use a queue (note the difference from depth-first search!) to trace the operation of breadth-first search. The queue is initialized with the traversal's starting vertex, which is marked as visited. On each iteration, the algorithm identifies all unvisited vertices that are adjacent to the front vertex, marks them as visited, and adds them to the queue; after that, the front vertex is
+removed from the queue. 
+
+Similarly to a DFS traversal, it is useful to accompany a BFS traversal by constructing the so-called breadth-first search forest. The traversal's starting vertex serves as the root of the first tree in such a forest. Whenever a new unvisited vertex is reached for the first time, the vertex is attached as a child to the vertex it is being
+reached from with an edge called a tree edge. If an edge leading to a previously visited vertex other than its immediate predecessor (i.e., its parent in the tree) is encountered, the edge is noted as a cross edge. Figure 5.6 provides an example of a breadth-first search traversal, with the traversal's queue and corresponding breadth-first search forest shown. 
+
+
+ALGORITHM BFS(G)
+//Implements a breadth-first search traversal of a given graph
+//Input: Graph G = (V, E)
+//Output: Graph G with its vertices marked with consecutive integers
+//in the order they have been visited by the BFS traversal 
+mark each vertex in V with 0 as a mark of being "unvisited"
+count +- 0
+for each vertex v in V do
+if v is marked with 0
+bfs(v)
+bfs(v)
+//visits all the unvisited vertices connected to vertex v by a path
+//and assigns them the numbers in the order they are visited
+//via global variable count
+count +-count + 1; mark v with count and initialize a queue with v
+while the queue is not empty do
+for each vertex w in V adjacent to the front vertex do
+if w is marked with 0
+count +-- count + 1; mark w with count
+add w to the queue
+remove the front vertex from the queue 
+
+
+Breadth-first search has the same efficiency as depth-first search:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

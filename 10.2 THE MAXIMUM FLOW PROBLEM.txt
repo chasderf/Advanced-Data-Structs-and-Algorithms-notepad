@@ -1,0 +1,49 @@
+10.2 THE MAXIMUM FLOW PROBLEM
+
+In this section, we consider the important problem of maximizing the flow of a material through a transportation network (pipeline system, communication system, and so on). We will assume that the transportation network in question can be represented by a connected weighted digraph with n vertices numbered from 1 to n and a set of edges E, with the following properties: 
+
+-It contains exactly one vertex with no entering edges; this vertex is called the source and assumed to be numbered 1. 
+
+-It contains exactly one vertex with no leaving edges; this vertex is called the sink and assumed to be numbered n . 
+
+-The weight uij of each directed edge (i, j) is a positive integer, called the edge capacity. (This number represents the upper bound on the amount of the material that can be sent from i to j through a link represented by this edge). 
+
+A digraph satisfying these properties is called a flow network or simply a network A small instance of a network is given in Figure 10.4. 
+
+We can solve linear programming problem (10.11) by the simplex method or
+by another algorithm for general linear programming problems (see Section 10.1 ). However, the special structure of problem (10.11) can be exploited to design faster algorithms. In particular, it is quite natural to employ the iterative improvement idea. We can always start with the zero flow (i.e., set xu= 0 for every edge (i, j) in the network). Then, on each iteration, we can try to find a path from source
+to sink along which some additional flow can be sent. Such a path is called flow augmenting. If a flow-augmenting path is found, we adjust the flow along the edges of this path to get a flow of an increased value and try to find an augmenting path for the new flow. If no flow-augmenting path can be found, we conclude that the current flow is optimal. This general template for solving the maximumflow problem is called the augmenting-path method, also known as the FordFulkerson method after L. R. Ford, Jr. and D. R. Fulkerson, who discovered it 
+
+THEOREM (Max-Flow Min-Cut Theorem) The value of a maximum flow in a
+network is equal to the capacity of its minimum cut. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

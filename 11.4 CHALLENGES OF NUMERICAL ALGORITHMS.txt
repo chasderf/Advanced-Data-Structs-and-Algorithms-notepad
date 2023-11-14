@@ -1,0 +1,45 @@
+11.4 CHALLENGES OF NUMERICAL ALGORITHMS
+
+Numerical analysis is usually described as the branch of computer science concerned with algorithms for solving mathematical problems. This description needs an important clarification: the problems in question are problems of "continuous" mathematics-solving equations and systems of equations, evaluating such functions as sin x and In x, computing integrals, and so on-as opposed to problems of discrete mathematics dealing with such structures as graphs, trees, permutations, and combinations. Our interest in efficient algorithms for mathematical problems stems from the fact that these problems arise as models of many real-life phenomena both in the natural world and in the social sciences. In fact, numerical analysis used to be the main area of research, study, and application of computer science. With the rapid proliferation of computers in business and everyday-life applications, which deal primarily with storage and retrieval of information, the relative importance of numerical analysis has shrunk in the last 30 years. However,
+its applications, enhanced by the power of modern computers, continue to expand in all areas of fundamental research and technology. Thus, wherever one's interests lie in the wide world of modern computing, it is important to have at least some understanding of the special challenges posed by continuous mathematical problems. 
+
+The accuracy of the floating-point representation depends on the number
+of significant digits p in representation (11.10). Most computers permit two or even three levels of precision: single precision (typically equivalent to between 6 and 7 significant decimal digits), double precision (13 to 14 significant decimal digits), and extended precision (19 to 20 significant decimal digits). Using higherprecision arithmetic slows computations but may help to overcome some of the problems caused by round-off errors. Higher precision may need to be used only
+for a particular step of the algorithm in question. As with an approximation of any kind, it is important to distinguish between
+the absolute error and the relative error of representing a number a* by its approximation a:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

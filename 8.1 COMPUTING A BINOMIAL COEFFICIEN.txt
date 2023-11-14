@@ -1,0 +1,55 @@
+8.1 COMPUTING A BINOMIAL COEFFICIENT 
+
+Computing a binomial coefficient is a standard example of applying dynamic
+programming to a nonoptimization problem. You may recall from your studies
+of elementary combinatorics that the binomial coefficient, denoted C(n, k) or G), is the number of combinations (subsets) of k elements from an n-element set (0 <= k <= n). The name "binomial coefficients" comes from the participation of these numbers in the binomial formula.
+
+ALGORITHM Binomial(n, k)
+//Computes C(n, k) by the dynamic programming algorithm
+//Input: A pair of nonnegative integers n ": k ": 0
+//Output: The value of C(n, k)
+for i <--- 0 to n do
+for j <--- 0 to min(i, k) do
+if j = 0 or j = i
+C[i, j] <---1
+else C[i, J] <--- C[i -1, j -1] + C[i -1, j]
+return C[n, k] 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

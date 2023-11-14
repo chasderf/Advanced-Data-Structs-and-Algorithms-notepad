@@ -1,0 +1,87 @@
+11.1 LOWER BOUND ARGUMENTS
+
+We can look at the efficiency of an algorithm two ways. We can establish its asymptotic efficiency class (say, for the worst case) and see where this class stands with respect to the hierarchy of efficiency classes outlined in Section 2.2. For example, selection sort, whose efficiency is quadratic, is a reasonably fast algorithm, whereas the algorithm for the Tower of Hanoi problem is very slow because its efficiency is exponential. One can argue, however, that this comparison is akin to the proverbial comparison of apples to oranges because these two algorithms solve
+different problems. The alternative and possibly "fairer" approach is to ask how efficient a particular algorithm is with respect to other algorithms for the same problem. Seen in this light, selection sort has to be considered slow because there are 0 (n log n) sorting algorithms; the Tower of Hanoi algorithm, on the other hand, turns out to be the fastest possible for the problem it solves. 
+
+
+
+When we want to ascertain the efficiency of an algorithm with respect to other algorithms for the same problem, it is desirable to know the best possible efficiency any algorithm solving the problem may have. Knowing such a lower bound can tell us how much improvement we can hope to achieve in our quest for a better algorithm for the problem in question. If such a bound is tight, i.e., we already know an algorithm in the same efficiency class as the lower bound, we can hope for a constant-factor improvement at best. If there is a gap between the efficiency of the fastest algorithm and the best lower bound known. the door for possible
+improvement remains open: either a faster algorithm matching the lower bound could exist or a better lower bound could be proved. 
+
+
+TRIVIAL LOWER BOUND
+
+The simplest method of obtaining a lower-bound class is based on counting the number of items in the problem's input that must be processed and the number of output items that need to be produced. Since any algorithm must at least "read" all the items it needs to process and "write" all its outputs, such a count yields a trivial lower bound. For example, any algorithm for generating all permutations of n distinct items must be in Q(n!) because the size of the output is n!. And this
+bound is tight because good algorithms for generating permutations spend a constant time on each of them except the initial one.
+
+INFORMATION THEORETIC ARGUMENTS
+
+While the approach outlined above takes into account the size of a problem's output, the information-theoretical approach seeks to establish a lower bound based on the amount of information it has to produce. Consider, as an example, the well-known game of deducing a positive integer between 1 and n selected by somebody by asking that person questions with yes/no answers. The amount of uncertainty that any algorithm solving this problem has to resolve can be measured li·by rlog2 n l, the number of bits needed to specify a particular number among the n possibilities. We can think of each question (or, to be more accurate, an answer to each question) as yielding at most one bit of information about the algorithm's output, i.e., the selected number. Consequently, any such algorithm will need at least [ log2 n l such steps before it can determine its output in the worst case. 
+
+The approach we just exploited is called the information-theoretic argument because of its connection to information theory. It has proved to be quite useful for finding the so-called information-theoretic lower bounds for many problems involving comparisons, including sorting and searching. Its underlying idea can be realized much more precisely through the mechanism of decision trees. Because of the importance of this technique, we discuss it separately and in more detail in
+Section 11.2. 
+
+ADVERSARY ARGUMENTS
+
+This example illustrates the adversary method for establishing lower bounds. It is based on following the logic of a malevolent but honest adversary: the malevolence makes him push the algorithm down the most time-consuming path, while his honesty forces him to stay consistent with the choices already made. A lower bound is then obtained by measuring the amount of work needed to shrink a set of potential inputs to a single input along the most time-consuming path. 
+
+
+PROBLEM REDUCTION
+We have already encountered the problem-reduction approach in Section 6.6. There, we discussed getting an algorithm for problem P by reducing it to another problem Q solvable with a known algorithm. A similar reduction idea can be used for finding a lower bound. To show that problem P is at least as hard as another problem Q with a known lower bound, we need to reduce Q to P (not P to Q!). In other words, we should show that an arbitrary instance of problem Q can be transformed (in a reasonably efficient fashion) to an instance of problem P, so
+any algorithm solving P would solve Q as well. Then a lower bound for Q will be a lower bound for P. Table 11.1lists several important problems that are often used for this purpose. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

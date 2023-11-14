@@ -1,0 +1,109 @@
+3 BRUTE FORCE
+
+Brute force is a straightforward approach to solving a problem, usually
+directly based on the problem statement and definitions of the concepts
+involved. 
+
+The "force" implied by the strategy's definition is that of a computer and not that of one's intellect. "Just do it!" would be another way to describe the prescription of the brute-force approach. And often, the brute-force strategy is indeed the one that is easiest to apply. 
+
+ALGORITHM SelectionSort(A[O .. n -1])
+//Sorts a given array by selection sort
+//Input: An array A[O .. n - 1] of orderable elements
+//Output: Array A[O .. n - 1] sorted in ascending order
+for i <- 0 to n - 2 do
+min+- i
+for} <-i+lton-ldo
+if A[j] < A[min] min <- j
+swap A[i] and A[min] 
+
+
+BUBBLE SORT
+Another brute-force application to the sorting problem is to compare adjacent elements of the list and exchange them if they are out of order. By doing it repeatedly, we end up "bubbling up" the largest element to the last position on the list. The next pass bubbles up the second largest element, and so on until, after n - 1 passes, the list is sorted. 
+
+ALGORITHM BubbleSort(A[O .. n - 1])
+//Sorts a given array by bubble sort
+in their final positions
+//Input: An array A[0 .. 11 - 1] o£ orderable elements
+//Output: Array A[0 .. 11- 1] sorted in ascending order
+for i <-- 0 to n - 2 do
+for j <-- 0 to 11 - 2 - i do
+if A[j + 1] < A[j] swap A[.i] and A[j + 1] 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

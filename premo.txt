@@ -1,0 +1,55 @@
+TRANSFORM AND CONQUER
+
+This chapter deals with a group of design methods that are based on the idea of transformation. We call this general technique tranform and conquer because these methods work as two stage procedures. First in the transformation stage, the problems instance is modified to be, for one reason or another, more amenable to solution. Then, in the second or conquering stage, it is solved.
+
+-Transformation to a simpler or more convenient instance of the same problem -- we call it instance simplification
+
+-Tranformation to a different representation of the same instance -- we call it representation change
+
+-Transformation to an instance of a different problem for which an algorithm is already available--we call it problem reduction
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

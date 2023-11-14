@@ -1,0 +1,66 @@
+6.1 PRESORTING
+
+Presorting is an acient idea in computer science. In fact, interest in sorting algorithms is due, to a significant degree, to the fact that many questions about a list are easier to answer if the list is sorted/Obviously, the time efficiency of algorithms that involve sorting may depend on the efficiency of the sorting algorithm being used/For the sake of simplicity, we assume throughout this section that lists are
+imp(emented as arrays, because some sorting algorithms are easier to implement for the array representation. 
+
+ALGORITHM PresortElementUniqueness(A[O .. n -1])
+//Solves the element uniqueness problem by sorting the array first
+//Input: An array A[O .. n- 1] of orderable elements
+//Output: Returns "true" if A has no equal elements, "false" otherwise
+sort the array A
+for i +- 0 to n - 2 do
+if A[i] = A [i + 1] return false
+return true 
+
+ALGORITHM PresortMode(A[O .. n - l]l
+//Computes the mode of an array by sorting it first
+//Input: An array A[O .. n - 1] of orderable elements
+//Output: The array's mode
+sort the array A
+i+--0
+modefrequency+- 0
+while i :<:0 n - 1 do
+//current run begins at position i
+//highest frequency seen so far
+runlength+- 1; runvalue+- A[i]
+while i+runlength:S n- 1 and A[i+runlength] =runvalue
+runlength+-runlength+ 1
+if runlength > modefrequency
+modefrequency+-runlength; modevalue+-runvalue
+i +-- i +runlength
+return modevalue 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

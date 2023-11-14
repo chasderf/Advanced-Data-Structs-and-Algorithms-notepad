@@ -1,0 +1,66 @@
+4.2 QUICKSORT
+
+ALGORITHM Quicksort(A[Lr])
+//Sorts a subarray by quicksort
+//Input: A subarray A[Lr] of A[O,n -1], defmed by its left and right indices
+II l and r
+//Output: Subarray A[l .. r] sorted in nondecreasing order
+if l < r
+s +-Partition(A[l .. r]) lis is a split position
+Quicksort(A[l .. s- 1])
+Quicksort(A[s + l..r]) 
+
+ALGORITHM Partition(A[l .. r])
+//Partitions a subarray by using its first element as a pivot
+//Input: A subarray A[l..r] of A[O .. n - 1], defined by its left and right
+II indices land r (! < r)
+//Output: A partition of A[l..r ], with the split position returned as
+II this ftmction's value
+p <-A[l]
+i +-l; j +- r + 1
+repeat
+repeat i <-- i + 1 until A[i]O> p
+repeat j <-- j - 1 until A[j] <( p
+swap(A[i], A[j])
+until i 2" j
+swap(A[i], A[j]) //undo last swap when i 2" j
+swap(A[!], A[j])
+return j 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

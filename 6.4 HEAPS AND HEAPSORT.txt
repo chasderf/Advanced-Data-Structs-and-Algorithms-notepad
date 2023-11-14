@@ -1,0 +1,63 @@
+6.4 HEAPS AND HEAPSORT
+
+The data structure called the "heap" is definitely not a disordered pile of items as the word's definition in a standard dictionary might suggest. Rather it is a clever, partially ordered data structure that is especially suitable for implementing priority queues. Recall that a priority queue is a multiset of items with an orderable characteristic called an item's priority, with the following operations: 
+
+-Finding an item with the highest(i.e.largest) priority
+
+-Deleting an item with the highest priority
+
+-Adding a new item to the multiset
+
+
+NOTION OF THE HEAP
+DEFINITION A heap can be defined as a binary tree with keys assigned to its nodes (one key per node) provided the following two conditions are met:
+1. The tree's shape requirement-the binary tree is essentially complete (or simply complete), that is, all its levels are full except possibly the last level, where only some rightmost leaves may be missing.
+2. The parental dominance requirement-the key at each node is greater than or equal to the keys at its children. (This condition is considered automatically
+satisfied for all leaves. )
+
+
+
+1. There exists exactly one essentially complete binary tree with n nodes. Its height is equal to [log2 n].
+2. The root of a heap always contains its largest element.
+3. A node of a heap considered with all its descendants is also a heap.
+4. A heap can be implemented as an array by recording its elements in the topdown, left-to-right fashion. It is convenient to store the heap's elements in positions 1 though n of such an array, leaving H[O] either unused or putting there a sentinel whose value is greater than every element in the heap. In such a representation,
+a. the parental node keys will be in the first ln/2J positions of the array,
+while the leaf keys will occupy the last rn/21 positions;
+b. the children of a key in the array's parental position i (1:::: i:::: Ln/2J) will be in positions 2i and 2i + 1, and, correspondingly, the parent of a key in position i (2 <= i <= n) will be in position [i /2]. 
+
+
+Maximum Key Deletion from a heap
+Step 1 Exchange the root's key with the last key K of the heap.
+Step 2 Decrease the heap's size by 1.
+Step 3 "Heapify" the smaller tree by sifting K down the tree exactly in the same way we did it in the bottom-up heap construction algorithm. That is, verify the parental dominance for K: if it holds, we are done; if not, swap K with the larger of its children and repeat this operation until the parental dominance condition holds forK in its new position. 
+
+
+
+Heapsort
+Now we can describe heapsort-an interesting sorting algorithm discovered by J. W. J. Williams [Wil64]. This is a two-stage algorithm that works as follows.
+Stage 1 (heap construction): Construct a heap for a given array.
+Stage 2 (maximum deletions): Apply the root-deletion operation n - 1 times to the remaining heap. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

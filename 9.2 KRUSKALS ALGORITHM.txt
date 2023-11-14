@@ -1,0 +1,50 @@
+9.2 KRUSKALS ALGORITHM
+
+In the previous section, we considered the greedy algorithm that "grows" a minimum spanning tree through a greedy inclusion of the nearest vertex to the vertices already in the tree. Remarkably, there is another greedy algorithm for the minimum spanning tree problem that also always yields an optimal solution. It is named Kruskal's algorithm [Kru56], after Joseph Kruskal, who discovered the algorithm when he was a second-year graduate student. Kruskal's algorithm looks at a ntinimum spanning tree for a weighted connected graph G = (V, E) as an acyclic subgraph with IV I - 1 edges for wltich the sum of the edge weights is the smallest. (It is not difficult to prove that such a subgraph must be a tree.) Consequently,
+the algorithm constructs a minimum spanning tree as an expanding sequence of subgraphs, which are always acyclic but are not necessarily connected on the intermediate stages of the algorithm. 
+
+
+DISJOINT SUBSETS AND UNION FIND ALGORITHMS
+
+Kruskal's algorithm is one of a number of applications that require a dynamic partition of some n-element setS into a collection of disjoint subsets Sl, S2, ... , Sk. After being initialized as a collection of n one-element subsets, each containing a different element of S, the collection is subjected to a sequence of intermixed union and find operations. (Note that the number of union operations in any such
+sequence must be bounded above by n - 1 because each union increases a subset's size at least by 1 and there are only n elements in the entire setS.) Thus, we are dealing here with an abstract data type of a collection of disjoint subsets of a finite set with the following operations: 
+
+makeset(x) creates a one-element set {x ].It is assumed that this operation can be applied to each of the elements of set S only once;
+
+find(x) returns a subset containing x;
+
+union(x, y) constructs the union of the disjoint subsets Sx and Sy containing
+x and y, respectively, and adds it to the collection to replace Sx and Sy, which
+are deleted from it. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,45 @@
+6.5 HORNERS RULE AND BINARY EXPONENTIATION
+
+HORNERS RULE
+Homer's rule is an old but very elegant and efficient algorithm for evaluating a polynomial. It is named after the British mathematician W. G. Horner, who published it in the early 19th century. But according to Knuth ([Knuii], p. 486), the method was used by Isaac Newton 150 years before Horner. You will appreciate this method much more if you first design an algorithm for the polynomial evaluation problem by yourself and investigate its efficiency (see Problems 1 and 2 in
+the exercises to this section). 
+
+
+
+BINARY EXPONENTIATION
+The amazing efficiency of Horner's rule fades if the method is applied to computing a", which is the value of x 11 at x =a. In fact, it degenerates to the brute-force multiplication of a by itself, with wasteful additions of zeros in between. Since computing an (actually, a11 mod m) is an essential operation in several important primality-testing and encryption methods, we consider now two algorithms for
+computing a" that are based on the representation change idea. They both exploit the binary representation of exponent n, but one of them processes this binary string left to right whereas the second does it right to left. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

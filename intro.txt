@@ -1,0 +1,86 @@
+7 SPACE AND TIME TRADEOFFS
+
+Space and time tradeoffs in algorithm design are a well-known issue for both theoreticians and practitioners of computing. Consider, as an example, the problem of computing values of a function at many points in its domain. If it is time that is at a premium, we can precompute the function's values and store them in a table. This is exactly what human computers had to do before the advent of electronic computers, in the process burdening libraries with thick volumes of mathematical tables. Though such tables have lost much of their appeal with the widespread use of electronic computers, the underlying idea has proven to be quite
+useful in the development of several important algorithms for other problems. In somewhat more general terms, the idea is to preprocess the problem's input, in whole or in part, and store the additional information obtained to accelerate solving the problem afterward. We call this approach input enhancement 1 and discuss the following algorithms based on it: 
+
+-Counting methods for sorting (section 7.1)
+
+-Boyer Moore algorithm for string matching and its simplified version sugested by horspool (section 7.2)
+
+
+The other type of technique that exploits space-for-time tradeoffs simply uses extra space to facilitate faster and/or more flexible access to the data. We call this approach prestructuring. This name highlights two facets of this variation of the space-for-time tradeoff: some processing is done before a problem in question is actually solved but, unlike the input-enhancement variety, it deals with access
+structuring. We illustrate this approach by
+-HASHING
+-Indexing with B trees
+
+
+There is one more algorithm design technique related to the space-for-time tradeoff idea: dynamic pl'ogl'amming. Tbis strategy is based on recording solutions to overlapping subproblems of a given problem in a table from which a solution to the problem in question is then obtained. We discuss this well-developed technique separately, in the next chapter of the book. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

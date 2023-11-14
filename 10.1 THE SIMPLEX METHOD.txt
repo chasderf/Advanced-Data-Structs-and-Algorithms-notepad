@@ -1,0 +1,70 @@
+10.1 THE SIMPLEX METHOD
+
+Geometric Interpretation of linear Programming
+Before we introduce a general method for solving linear programming problems, let us consider a small example, which will help us to see the fundamental properties of such problems. 
+
+
+THEOREM (Extreme Point Theorem} Any linear programming problem with
+a nonempty bounded feasible region has an optimal solution; moreover, an optimal solution can always be found at an extreme point of the problem's feasible region.
+
+An Outline of the Simplex Method
+Our task now is to "translate" the geometric description of the simplex method into the more algorithmically precise language of algebra. To begin with, before we can apply the simplex method to a linear programming problem, it has to be represented in a special form called the standard fonn. The standard form has the following requirements: 
+
+-It must be a maximization problem
+
+-All the constraints (except the nonnegativity constraints) must be in the form of linear equations
+
+-All the variables must be required to be nonnegative
+
+Summary of the simplex method
+
+Step 0 Initialization Present a given linear programming problem in standard form and set up an initial tableau with nonnegative entries in the rightmost column and m other columns composing the m-by-m identity
+matrix. (Entries in the objective row are to be disregarded in verifying
+these requirements.) These m columns define the basic variables of the
+initial basic feasible solution, used as the labels of the tableau's rows.
+
+Step 1 Optimality test If all the entries in the objective row (except, possibly, the one in the rightmost column, which represents the value of the objective function) are nonnegative-stop: the tableau represents an
+optimal solution whose basic variables' values are in the rightmost
+column and the remaining, nonbasic variables' values are zeros.
+
+Step 2 Finding the entering variable Select a negative entry among the first n elements of the objective row. (A commonly used rule is to select the negative entry with the largest absolute value, with ties broken arbitrarily.) Mark its column to indicate the entering variable and the pivot column.
+
+Step 3 Finding the departing variable For each positive entry in the pivot column, calculate the &-ratio by dividing that row's entry in the rightmost column by its entry in the pivot column. (If all the entries in the pivot column are negative or zero, the problem is unbounded-stop.) Find the row with the smallest &-ratio (ties may be broken arbitrarily), mark this row to indicate the departing variable and the pivot row.
+
+Step 4 Forming the next tableau Divide all the entries in the pivot row by its entry in the pivot column. Subtract from each of the other rows,
+including the objective row, the new pivot row multiplied by the entry
+in the pivot column of the row in question. (This will make all the
+entries in the pivot column O's except for 1 in the pivot row). Replace
+the label of the pivot row by the variable's name of the pivot column
+and go back to Step 1. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

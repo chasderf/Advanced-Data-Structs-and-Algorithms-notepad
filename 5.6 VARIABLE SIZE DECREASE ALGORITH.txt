@@ -1,0 +1,7 @@
+5.6 VARIABLE SIZE DECREASE ALGORITHMS
+
+COMPUTING A MEDIAN AND THE SELECTION PROBLEM
+
+The selection problem is the problem of finding the kth smallest element in a list of n numbers. This number is called the kth order statistic. Of course, for k = 1 or k = n, we can simply scan the list in question to find the smallest or largest element, respectively. A more interesting case of this problem is for k = r n/21, which asks to find an element that is greater than one half of the list's elements and smaller than the other half. This middle value is called the median, and it is one of the most important quantities in mathematical statistics. Obviously, we can
+find the kth smallest element in a list by sorting the list first and then selecting the kth element in the output of a sorting algorithm. The time of such an algorithm is determined by the efficiency of the sorting algorithm used. Thus, with a good sorting algorithm such as mergesort, the algorithm's efficiency is in 0 (n log n). 
+

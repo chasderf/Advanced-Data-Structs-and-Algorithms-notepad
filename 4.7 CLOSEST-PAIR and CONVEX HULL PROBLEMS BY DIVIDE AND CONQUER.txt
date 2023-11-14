@@ -1,0 +1,81 @@
+4.7 CLOSEST-PAIR and CONVEX HULL PROBLEMS BY DIVIDE AND CONQUER
+
+In Section 3.3, we discussed the brute-force approach to solving two classic problems of computational geometry: the closest-pair problem and the convex-hull problem. We saw that the two-dimensional versions of these problems can be Solved by brute-force algorithms in 8 (n 2) and 0 (n 3) time, respectively. In this section, we discuss more sophisticated and asymptotically more efficient algorithms for these problems, which are based on the divide-and-conquer technique. 
+
+CLOSEST PAIR PROBLEM
+
+Let P1 = (x1, y1),..., Pn = (xn, yn) be a set S of n points in the plane, where n, for simplicity, is a power of two. With no loss of generality, we can assume that the points are ordered in ascending order of their x coordinates. (If they were not, we can sort them in O(n log n) time, e.g., by mergesort.) We can divide the points given into two subsets S1 and S2 of 11(2 points each by drawing a vertical line x = c so that n/2 points lie to the left of or on the line itself, and 11/2 points lie to the
+right of or on the line. (One way of finding an appropriate value for constant c for doing this is to use the median I"' of the x coordinates.) 
+
+
+CONVEX HULL PROBLEM
+
+Let us revisit the convex-hull problem introduced in Section 3.3: fmd the smallest convex polygon that contains 11 given points in the plane. We consider here a divide-and-conquer algorithm called quickhull because of its resemblance to quicksort. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

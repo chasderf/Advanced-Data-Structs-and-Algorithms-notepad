@@ -1,0 +1,74 @@
+CH 1.2 Fundamentals of algorithmic problem solving
+
+We can consider algorithms to be procedural solutions to problems. 
+
+
+An input to an algorithm specifies an ';nstanc~ of the problem the algorithm solves. It is very important to specify exactly the range of instances the algorithm needs to handle. (As an example, recall the variations in the range of instances for the three greatest common divisor algorithms discussed in the previous section.) If you fail to do this, your algorithm may work correctly for a majority of inputs but crash on some "boundary" value.,t-gemember that a correct algorithm is not
+one that works most of the time, but 'One that works correctly for alllegitiJ!!aty inputs.
+
+
+Do not skimp on this first step of the algorithmic problem-solving process; if you do, you will run the risk of unnecessary rework. 
+
+Choosing between Exact and Approximate Problem Solving
+The next principal decision is to choose between solving the problem exactly or solving it approximately. In the former case, an algorithm is called an exact algorithm; in the latter case, an algorithm is called an approximation algorithm. Why would one opt for an approximation algorithm? First, there are important problems that simply cannot be solved exactly for most of their instances; examples include extracting square roots, solving nonlinear equations, and evaluating definite integrals. Second, available algorithms for solving a problem exactly can be unacceptably slow because of the problem's intrinsic complexity. Tbis happens, in
+particular, for many problems involving a very large number of choices; you will see examples of such difficult problems in Chapters 3, 11, and 12. Third, an approximation algorithm can be a part of a more sophisticated algorithm that solves a problem exactly. 
+
+Deciding on Appropriate Data Structures
+Some algorithms do not demand any ingenuity in representing their inputs. But others are, in fact, predicated on ingenious data structures. In addition, some of the algorithm design techniques we shall discuss in Chapters 6 and 7 depend intimately on structuring or restructuring data specifying a problem's instance.
+Many years ago, an influential textbook proclaimed the fundamental importance of both algorithms and data structures for computer programming by its very title: Algorithms + Data Structures ~ Programs [Wir76]. In the new world of objectoriented programming, data structures remain crucially important for both design and analysis of algorithms. We review basic data structures in Section 1.4. 
+
+Algorithm design techniques
+An algorithm design technique (or "strategy" or "paradigm") is a general
+approach to solving problems algorithmically that is applicable to a variety of problems from different areas of computing. 
+
+
+Methods of Specifying an Algorithm
+Once you have designed an algorithm, you need to specify it in some fashion. Section 1.1, to give you an example, we described Euclid's algorithm in words (in a free and also a step-by-step form) and in pseudocode. These are the two options that are most widely used nowadays for specifying algorithms. 
+
+Using a natural language has an obvious appeal; however, the inherent ambiguity of any natural language makes a succinct and clear description of algorithms surprisingly difficult. Nevertheless, being able to do this is an important skill that
+you should strive to develop in the process of learning algorithms.
+A pseudocode is a mixture of a natural language and programming languagelike constructs. A pseudocode is usually more precise than a natural language, and its usage often yields more succinct algorithm descriptions. Surprisingly, computer scientists have never agreed on a single form of pseudocode, leaving textbook authors to design their own "dialects." Fortunately, these dialects are so close to each other that anyone familiar with a modern programming language should be able to understand them all.
+
+This book's dialect was selected to cause minimal difficulty for a reader. For the sake of simplicity, we omit declarations of variables and use indentation to show the scope of such statements as for, if, and while. As you saw in the previous section, we use an arrow <-- for the assignment operation and two slashes I I for comments.
+
+In the earlier days of computing, the dominant vehicle for specifying algorithms was a flowchart, a method of expressing an algorithm by a collection of connected geometric shapes containing descriptions of the algorithm's steps. This representation technique has proved to be inconvenient for all but very simple algorithms; nowadays, it can be found only in old algorithm books.
+
+The state of the art of computing has not yet reached a point where an
+algorithm's description-whether in a natural language or a pseudocode-can be fed into an electronic computer directly. Instead, it needs to be converted into a computer program written in a particular computer language. We can look at such a program as yet another way of specifying the algorithm, although it is preferable to consider it as the algorithm's implementation. 
+
+Analyzing an Algorithm
+We usually want our algorithms to possess several qualities. After correctness, by far the most important is efficiency. In fact, there are two kinds of algorithm efficiency: time efficiency and space efficiency. Time ~fficiency indicates how fast the algorithm runs; space efficiency indicates how much extra memory the algorithm needs. A general framework and specific techniques for analyzing an algorithm's efficiency appear in Chapter 2. 
+
+
+Another desirable characteristic of an algorithm is simplicity. Unlike efficiency, which can be precisely defined and investigated with mathematical rigor, simplicity, like beauty, is to a considerable degree in the eye of the beholder. For example, most people would agree that Euclid's algorithm is simpler than the middle-school procedure for computing gcd(m, n), but it is not clear whether Euclid's algorithm is simpler than the consecutive integer checking algorithm. Still,
+simplicity is an important algorithm characteristic to strive for. Why? Because simpler algorithms are easier to understand and easier to program; consequently, the resulting programs usually contain fewer bugs. There is also the undeniable aesthetic appeal of simplicity. Sometimes simpler algorithms are also more efficient
+than more complicated alternatives. Unfortunately, it is not always true, in which case a judicious compromise needs to be made.
+
+Yet another desirable characteristic of an algorithm is generality. There are, in fact, two issues here: generality of the problem the algorithm solves and the range of inputs it accepts. On the first issue, note that it is sometimes easier to design an algorithm for a problem posed in more general terms. Consider, for example, the problem of determining whether two integers are relatively prime, i.e., whether their only common divisor is equal to 1. It is easier to design an
+algorithm for a more general problem of computing the greatest common divisor of two integers and, to solve the former problem, check whether the gcd is 1 or not. There are situations, however, where designing a more general algorithm is unnecessary or difficult or even impossible. For example, it is unnecessary to sort a list of n numbers to find its median, which is its r n/21 th smallest element. To give
+another example, the standard formula for roots of a quadratic equation cannot be generalized to handle polynomials of arbitrary degrees. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

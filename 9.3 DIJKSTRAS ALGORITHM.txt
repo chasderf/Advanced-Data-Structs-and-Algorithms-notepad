@@ -1,0 +1,41 @@
+9.3 DIJKSTRAS ALGORITHM
+
+In this section, we consider the single-source shortest-paths problem: for a given vertex called the source in a weighted connected graph, find shortest paths to all its other vertices. It is important to stress that we are not interested here in a single shortest path that starts at the source and visits all the other vertices. This would have been a much more difficult problem (actually, a version of the traveling salesman problem mentioned in Section 3.4 and discussed again later in the book). The single-source shortest-paths problem asks for a family of paths, each leading from the source to a different vertex in the graph, though some paths may, of course, have edges in common. 
+
+-Move u* from the fringe to the set of tree vertices. 
+
+-For each remaining fringe vertex u that is connected to u* by an edge of weight w(u*, u) such that dU* + w(u*, u) <dU, update the labels of u by u* and du* + w(u*, u), respectively. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,73 @@
+4 DIVIDE AND CONQUER MERGESORT
+
+
+Divide-and-conquer is probably the best-known general algorithm design
+technique. Though its fame may have something to do with its catchy name, it is well deserved: quite a few very efficient algorithms are specific implementations of this general strategy. Divide-and-conquer algorithms work according to the following general plan:
+1. A problem's instance is divided into several smaller instances of the same problem, ideally of about the same size.
+2. The smaller instances are solved (typically recursively, though sometimes a different algorithm is employed when instances become small enough).
+3. If necessary, the solutions obtained for the smaller instances are combined to get a solution to the original instance. 
+
+MERGESORT
+
+ALGORITHM Mergesort(A[O .. n - 1])
+//Sorts array A[O .. n - 1] by recursive mergesort
+//Input: An array A[O .. n - 1] of orderable elements
+//Output: Array A[O .. n - 1] sorted in nondecreasing order
+ifn > 1
+copy A[O .. Ln/2J -1]to B[O .. Ln/2J -1]
+copy A[Ln/2J .. n -1] to C[o .. rn/21 -1]
+Mergesort(B[O .. Ln/2J - 1])
+Mergesort(C[O .. rn/21 -1])
+Merge(B, C, A) 
+
+The merging of two sorted arrays can be done as follows. Two pointers (array indices) are initialized to point to the first elements of the arrays being merged. The elements pointed to are compared, and the smaller of them is added to a new array being constructed; after that, the index of the smaller element is incremented to point to its immediate successor in the array it was copied from. This operation
+is repeated until one of the two given arrays is exhausted, and then the remaining elements of the other array are copied to the end of the new array. 
+
+ALGORITHM Merge(B[O .. p- 1], C[O .. q -1], A[O .. p + q -1])
+//Merges two sorted arrays into one sorted array
+//Input: Arrays B[O .. p -1] and C[O .. q -1] both sorted
+//Output: Sorted array A[O .. p + q -1] of the elements of Band C
+i +--0; j +--0; k +--0
+whilei <pandj <q do
+if B[i] :S C[j]
+A[k] +- B[i]; i +- i + 1
+else A[k] +- C[j]; j +- j + 1
+k+-k+1
+ifi = p
+copy C[j .. q -1] to A[k .. p +q -1]
+else copy B[i..p -1] to A[k .. p + q -1]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,36 @@
+An algorithm is a sequence of unambiguous instructions for solving a
+problem, i.e., for obtaining a required output for any legitimate input in
+a finite amount of time. 
+
+-The range of inputs for which an algorithm works has to be specified carefully
+
+-The same algorithm can be represented in several different ways
+
+-Several algorithms for solving the same problem may exist
+
+-Algorithms for the same problem can be based on very different ideas and can solve the problem with dramatically different speeds
+
+Recall that the greatest common divisor of two nonnegative, not -both-zero
+integers m and n, denoted gcd(m, n), is defined as the largest integer that divides both m and n evenly, i.e., with a remainder of zero. Euclid of Alexandria (third century B.C.) outlined an algorithm for solving this problem in one of the volumes of his Elements, most famous for its systematic exposition of geometry. In modern terms, Euclid's algorithm is based on applying repeatedly the equality 
+			gcd(m, n) = gcd(n, m mod n)
+(where m mod n is the remainder of the division of m by n) until m mod n is equal to 0; since gcd(m, 0) = m (why?), the last value of m is also the greatest common divisor of the initial m and n. 
+
+Euclid's algorithm for computing gcd(m, n)
+
+Step 1 If n = 0, return the value of m as the answer and stop; otherwise, proceed to Step 2.
+
+Step 2 Divide m by n and assign the value of the remainder to r.
+
+Step 3 Assign the value of n tom and the value of r ton. Go to Step 1.
+Alternatively, we can express the same algorithm in a pseudocode:
+
+
+ALGORITHM Euclid(m, n)
+//Computes gcd(m, n) by Euclid's algorithm
+!!Input: Two nonnegative, not -both-zero integers m and n
+//Output: Greatest common divisor of m and n
+while n oJ 0 do
+r +-m modn
+m +-n
+n +---- r
+return m 

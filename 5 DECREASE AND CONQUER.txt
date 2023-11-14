@@ -1,0 +1,60 @@
+5 DECREASE AND CONQUER
+
+5.1 INSERTION SORT
+
+The decrease and conquer technique is based on exploiting the relationship between a solution to a given instance of a problem and a solution to a smaller instance of the same problem. Once such a relationship is established, it can be exploited either top down (recursively) or bottom up (without a recursion). There are three major variations of decrease and conquer:
+
+-Decrease by a constant 
+
+-Decrease by a constant factor
+
+-Variable size decrease
+
+The decrease-by-a-constant-factor technique suggests reducing a problem's
+instance by the same constant factor on each iteration of the algorithm. In most applications, this constant factor is equal to two. (Can you give an example of such an algorithm?) 
+
+5.1 Insertion Sort
+
+There are three reasonable alternatives for doing this. First, we can scan the sorted subarray from left to right until the first element greater than or equal to A[11 -1] is encountered and then insert A[11 -1] right before that element. Second, we can scan the sorted subarray from right to left until the first element smaller than or equal to A[n -1] is encountered and then insert A[n -1] right after that element. These two alternatives are essentially equivalent; usually, it is the second one that is implemented in practice because it is better for sorted and almost-sorted arrays (whf\). The resulting algorithm is called straight insertion sort or simply insertion sort. The third alternative is to use binary search to find an
+appropriate position for A [ n - 1] in the sorted portion of the array. The resulting algorithm is called binary insertion sort. We ask you to implement this idea and investigate the efficiency of binary insertion sort in the exercises to this section.
+
+
+ALGORITHM InsertionSort(A[O .. n - 1])
+//Sorts a given array by insertion sort
+//lnput: An array A[O.n- 1] of n orderable elements
+//Output: Array A[O.n - 1] sorted in nondecreasing order
+for i <--- 1 to n - 1 do
+v <--- A[i]
+j<---i - 1
+while j > 0 and A[j] > v do
+A[j + 1] <--- A[j]
+j<---j-1
+A[j+1]<-v 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

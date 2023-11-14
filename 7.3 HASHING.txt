@@ -1,0 +1,51 @@
+7.3 HASHING
+
+Hashing is based on the idea of distributing keys among a one-dimensional
+array H[O .. m- 1] called a hash table. The distribution is done by computing, for each of the keys, the value of some predefined function h called the hash function. This function assigns an integer between 0 and m - 1, called the hash address, to a key. For example, if keys are nonnegative integers, a hash function can be of the form h(K) = K mod m (obviously, the remainder of division by m is always between 0 and m - 1). If keys are letters of some alphabet, we can first assign a letter its position in the alphabet (denoted here ord(K)) and then apply
+the same kind of a function used for integers. Finally, if K is a character string coc1 ... cs_lo we can use, as a very unsophisticated option, CL:;:t ord(c;)) mod m; a better option is to compute h(K) as follows:
+h <-- 0; fori <-- 0 to s - 1 do h <-- (h * C + ord(ci)) mod m,
+
+In general, a hash function needs to satisfy two somewhat conflicting requirements: 
+
+-A hash function needs to distribute keys among the cells of a hash table as evenly as possible (because of this requirement, the value of m is usually chosen to be prime. This requirement also makes it desirable, for most applications, to have a hash function dependent on all bits of a key, not just some of them.) 
+
+-A hash function has to be easy to compute
+
+
+OPEN HASHING (SEPERATE CHAINING)
+In open hashing, keys are stored in linked lists attached to cells of a hash table. Each list contains all the keys hashed to its cell. 
+
+CLOSING HASHING (OPEN ADDRESSING)
+In closed hashing, all keys are stored in the hash table itself without the use of linked lists. (Of course, this implies that the table size m must be at least as large as the number of keys n.) Different strategies can be employed for collision resolution. The simplest one-called linear probing-checks the cell following the one where the collision occurs. If that cell is empty, the new key is installed there; if the next cell is already occupied, the availability of that cell's immediate successor is checked, and so on. Note that if the end of the hash table is reached, the search is wrapped to the beginning of the table; that is, it is treated as a circular array. This method is illustrated in Figure 7.6 by applying it to the same list of words we used above to illustrate separate chaining (we also use the same hash function). 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

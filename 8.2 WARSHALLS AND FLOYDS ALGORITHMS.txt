@@ -1,0 +1,48 @@
+8.2 WARSHALLS AND FLOYDS ALGORITHMS
+
+Warshall's Algorithm
+Recall that the adjacency matrix A= {au} of a directed graph is the boolean matrix that has 1 in its ith row and jth column if and only if there is a directed edge from the ith vertex to the jth vertex. We may also be interested in a matrix containing the information about the existence of directed paths of arbitrary lengths between vertices of a given graph. 
+
+DEFINITION The transitive closure of a directed graph with n vertices can be defined as the n-by-n boolean matrix T = {tij}, in which the element in the ith row (1 <= i <= n) and the jth column (1 <= j <= n) is 1 if there exists a nontrivial directed path (i.e., a directed path of a positive length) from the ith vertex to the jth vertex; otherwise, tij is 0. 
+
+Since this method traverses the same digraph several times, we should hope that a better algorithm can be found. Indeed, such an algorithm exists. It is called Warshall's algorithm after S. Warshall [War62]. Warshall's algorithm constructs the transitive closure of a given digraph with n vertices through a series of n-by-n boolean matrices: 
+
+
+FLOYDS ALGORITHM FOR THE ALL PAIRS SHORTEST PATHS PROBLEMS
+
+Given a weighted connected graph (undirected or directed), the all-pairs shortestpaths problem asks to find the distances (the lengths of the shortest paths) from each vertex to all other vertices. It is convenient to record the lengths of shortest paths in an n-by-n matrix D called the distance matrix: the element diJ in the ith row and the jth column of this matrix indicates the length of the shortest path from the ith vertex to the jth vertex (1 <= i, j <= n ). For an example, see Figure 8.5. 
+
+We can generate the distance matrix with an algorithm that is very similar to Warshall's algorithm. It is called Floyd's algorithm, after its inventor R. Floyd [Flo62]. It is applicable to both undirected and directed weighted graphs provided that they do not contain a cycle of a negative length. (Of course, in the case of a directed graph, by a path or cycle we mean a directed path or a directed cycle.) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,45 @@
+8.3 OPTIMAL BINARY SEARCH TREES
+
+A binary search tree is one of the most important data structures in computer science. One of its principal applications is to implement a dictionary, a set of elements with the operations of searching, insertion, and deletion. If probabilities of searclting for elements of a set are known (e.g., from accumulated data about past searches), it is natural to pose a question about an optimal binary search tree for which the average number of comparisons in a search is the smallest possible. (For simplicity, we limit our discussion to minimizing the average number
+of comparisons in a successful search. The method can be extended to include unsuccessful searches as well.) 
+
+For our tiny example, we could find the optimal tree by generating all 14
+binary search trees with these keys. As a general algorithm, this exhaustive-search approach is unrealistic: the total number of binary search trees with n keys is equal to the nth Catalan number 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

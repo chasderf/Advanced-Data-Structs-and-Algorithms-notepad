@@ -1,0 +1,49 @@
+5.3 TOPOLOGICAL SORTING
+
+A directed graph, or digraph for short, is a graph with directions
+specified for all its edges (Figure 5.8a is an example). The adjacency matrix and adjacency lists are still two principal means of representing a digraph. There are only two notable differences between undirected and directed graphs in representing them: (1) the adjacency matrix of a directed graph does not have to be symmetric; (2) an edge in a directed graph has just one (not two) corresponding nodes in the digraph's adjacency lists.
+
+Depth-first search and breadth-first search are principal traversal algorithms for traversing digraphs, but the structure of corresponding forests can be more complex. Thus, even for the simple example in Figure 5.8a, the depth-first search forest (Figure 5.8b) exhibits all four types of edges possible in a DFS forest of a directed graph: tree edges (ab, he, de), back edges (ba) from vertices to their ancestors, forward edges ( ac) from vertices to their descendants in the tree other than their children, and cross edges (de), which are none of the forementioned types. 
+
+Note that a back edge in a DFS forest of a directed graph can connect a vertex to its parent. Whether or not it is the case, the presence of a back edge indicates that the digraph has a directed cycle. (A directed cycle in a digraph is a sequence of three or more of its vertices that starts and ends with the same vertex and in which every vertex is connected to its inllllediate predecessor by an edge directed from the predecessor to the successor.) Conversely, if a DFS forest of a digraph
+has no back edges, the digraph is a dag, an acronym for directed acyclic graph. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,46 @@
+9.4 HUFFMAN TREES
+
+Suppose we have to encode a text that comprises characters from some n-character alphabet by assigning to each of the text's characters some sequence of bits called the codeword. For example, we can use a fixed-length encoding that assigns to each character a bit string of the same length m (m 2: log2 n ). This is exactly what the standard ASCII code does. One way of getting a coding scheme that yields a shorter bit string on the average is based on the old idea of assigning shorter codewords to more frequent characters and longer codewords to less frequent characters. (This idea was used, in particular, in the telegraph code invented in
+the mid-19th century by Samuel Morse. In that code, frequent letters such as e (.) and a (--) are assigned short sequences of dots and dashes while infrequent letters such as q (- - ·-) and z (- - .. ) have longer ones.) 
+
+Huffman's Algorithm
+
+Step 1 Initialize n one-node trees and label them with the characters of the alphabet. Record the frequency of each character in its tree's root to
+indicate the tree's weight. (More generally, the weight of a tree will be
+equal to the sum of the frequencies in the tree's leaves.) 
+
+Step 2 Repeat the following operation until a single tree is obtained. Find two trees with the smallest weight (ties can be broken arbitrarily, but see Problem 2 in the exercises). Make them the left and right subtree of a new tree and record the snm of their weights in the root of the new tree as its weight. 
+
+A tree constructed by the above algorithm is called a Huffman tree. It
+defines-in the manner described-a Huffman code. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

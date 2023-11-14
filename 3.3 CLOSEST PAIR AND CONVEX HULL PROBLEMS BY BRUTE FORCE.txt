@@ -1,0 +1,58 @@
+3.3 CLOSEST PAIR AND CONVEX HULL PROBLEMS BY BRUTE FORCE
+
+In this section, we consider a straightforward approach to two well-known problems dealing with a finite set of points in the plane. These problems, aside from their theoretical interest, arise in two important applied areas: computational geometry and operations research. 
+
+CLOSEST PAIR PROBLEM
+The closest-pair problem calls for finding two closest points in a set of n points. For simplicity, we consider the two-dimensional case, although the problem can be posed for points in higher-dimensional spaces as well. We assume that the points in question are specified in a standard fashion by their (x. y) Cartesian coordinates and that the distance between two points P; = (x;. Y;) and Pj = (x j, y j) is the standard Euclidean distance.
+
+ALGORITHM BruteForceClosestPoints(P)
+//Finds two closest points in the plane by brute force
+//Input: A list P of n (n ": 2) points P1 = (xJ, y1), ... , P, = (xn, y,)
+//Output: Indices index1 and index2 of the closest pair of points
+dmin +- oo
+for i <-- 1 to n - 1 do
+forj <-i+ltondo
+d <-- sqrt ((x1 - x)2 + (y1 - y1)
+2) 1/sqrt is the square root function
+if d < dmin
+dmin +- d; indexl +-- i; index2 +-- j
+return index1, index2 
+
+CONVEX HULL PROBLEM
+
+On to the other problem--computing the convex hull. We start with a definition of a convex set.
+
+DEFINITION A set of points (finite or infinite) in the plane is called convex if for any two points P and Q in the set, the entire line segment with the endpoints at P and Q belongs to the set. 
+
+DEFINITION The convex hull of a set S of points is the smallest convex set containing S. (The "smallest" requirement means that the convex hull of S must be a subset of any convex set containing S.) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

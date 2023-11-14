@@ -1,0 +1,60 @@
+2.7 ALGORITHM VISUALIZATION
+
+In addition to the mathematical and empirical analyses of algorithms, there is yet a third way to study algorithms. It is called algorithm visualization and can be defined as the use of images to convey some useful information about algorithms. That information can be a visual illustration of an algorithm's operation, of its performance on different kinds of inputs, or of its execution speed versus that of other
+algorithms for the same problem. To accomplish this goal, an algorithm visualization uses graphic elements (points, line segments, two- or three-dimensional bars, and so on) to represent some "interesting events" in the algorithm's operation.
+	There are two principal variations of algorithm visualization: 
+
+-Static algorithm visualization
+-Dynamic algorithm visualization, also called algorithm animation
+
+1. Be consistent
+2. Be interactive
+3. Be clear and concise
+4.Be forgiving to the user
+5. Adapt to the knowledge level of the user
+6.Emphasize the visual component
+7.Keep the user interested
+8.Incorporate both symbolic and iconic representations
+9.Include algorithms analysis (run statistics) and comparisons with other algorithms for the same problem
+10. Include execution history
+
+There are two principal applications of algorithm visualization: research and education. The application to education seeks to help students learning algorithms. Potential benefits for researchers are based on expectations that algorithm visualization may help uncover some unknown features of algorithms. For example, one researcher used a visualization of the recursive Tower of Hanoi algorithm
+in which odd- and even-numbered disks were two different colors. He noticed that two disks of the same color never came in direct contact during the algorithm's execution. This observation helped him in developing a better nonrecursive version
+of the classic algorithm. 
+
+
+Although some successes in both education and research applications have
+been reported, they are not as impressive as one might expect. Experience has shown that creating sophisticated software systems is not going to be enough. A deeper understanding of human perception of images will be required before the true potential of algorithm visualization is fulfilled. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

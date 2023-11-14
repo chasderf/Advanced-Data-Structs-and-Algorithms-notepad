@@ -1,0 +1,54 @@
+4.3 BINARY SEARCH
+
+Though binary search is clearly based on a recursive idea, it can he easily implemented as a nonrecursive algorithm, too. Here is a pseudocode for this nonrecursive version. 
+
+ALGORITHM BinarySearch(A[O .. n -1], K)
+//Implements nonrecursive binary search
+//Input: An array A[O .. n - 1] sorted in ascending order and
+II a search key K
+//Output: An index of the array's element that is equal to K
+II or -1 if there is no such element
+l+-O;r+-n-1
+while l <:: r do
+m +- L(l + r)/2J
+ifK =A[m]returnm
+elseifK <A[m] r <--m-1
+else! <--m+1
+return -1 
+
+The standard way to analyze the efficiency of binary search is to count the number of times the search key is compared with an element of the array. Moreover, for the sake of simplicity, we will count the so-called three-way comparisons. This assumes that after one comparison of K with A[m], the algorithm can determine whether K is smaller, equal to, or larger than A[m ]. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

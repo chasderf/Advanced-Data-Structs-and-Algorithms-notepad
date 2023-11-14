@@ -1,0 +1,20 @@
+2.5 EXAMPLE: FIBONACCI NUMBERS
+
+In this section, we consider the Fibonacci numbers, a famous sequence 
+0, 1, 1, 2, 3, 5, 8, 13, 21, 34
+that can be defined by the simple recurrence
+		F(n) = F(n-1) + F(n-2) for n>1
+and two initial conditions
+		F(0) = 0, F(1) = 1
+Explicit Formula for the nth Fibonacci Number
+If we try to apply the method of backward substitutions to solve recurrence (2.6), we will fail to get an easily discernible pattern. Instead, let us take advantage of a theorem that describes solutions to a homogeneous second-order linear recurrence with constant coefficients
+		ax(n) + bx(n- 1) + cx(n- 2) = 0
+
+ALGORITHMS FOR COMPUTING FIBONACCI NUMBERS
+ALGORITHM F(n)
+//Computes the nth Fibonacci number recursively by using its definition
+//Input: A nonnegative integer n
+//Output: The nth Fibonacci number
+ifn::::; 1 retumn
+else return F(n - 1) + F(n - 2) 
+

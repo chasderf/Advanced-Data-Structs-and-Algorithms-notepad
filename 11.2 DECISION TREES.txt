@@ -1,0 +1,6 @@
+11.2 DECISION TREES
+
+DECISION TREES FOR SORTING ALGORITHMS
+Most sorting algorithms are comparison-based, i.e., they work by comparing elements in a list to be sorted. Moreover, with the notable exception of binary insertion sort (Problem 9 in Exercises 5.1), comparing two elements is the basic operation of such algorithms. Therefore, by studying properties of decision trees for comparison-based sorting algorithms, we can derive important lower bounds on time efficiencies of such algorithms. 
+
+DECISION TREES FOR SEARCHING A SORTED ARRAY

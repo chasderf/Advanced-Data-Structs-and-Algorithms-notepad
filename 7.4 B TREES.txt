@@ -1,0 +1,49 @@
+7.4 B TREES
+
+The idea of using extra space to facilitate faster access to a given data set is particularly important if the data set in question contains a very large number of records that need to be stored on a disk. A principal device in organizing such data sets is an index, which provides some information about the location of records with indicated key values. For data sets of structured records (as opposed to "unstructured" data such as text, images, sound, and video), the most important index organization is the B-tree, introduced by R. Bayer and E. McGreight [Bay72]. It extends the idea of the 2-3 tree (see Section 6.3) by permitting more than a single key in the same node of a search tree. 
+
+In the B-tree version we consider here, all data records (or record keys)
+are stored at the leaves, in increasing order of the keys. The parental nodes are used for indexing. Specifically, each parental node contains n - 1 ordered keys K1 < ... < K,_1 assumed, for the sake of simplicity, to be distinct. The keys are interposed with n pointers to the node's children so that all the keys in subtree. To are smaller than K l> all the keys in subtree T1 are greater than or equal to K1 and smaller than K2 with K1 being equal to the smallest key in Th and so on through the last subtree T,,_1 whose keys are greater than or equal than K,_1 with K,_1 being equal to the smallest key in T,,_1 (Figure 7.7). The node depicted in Figure 7.7 is called the n-node. Thus, all the nodes in a classic binary search tree are 2-nodes; a 2-3 tree introduced in Section 6.3 comprises 2-nodes and 3-
+nodes. 
+
+
+-The root is either a leaf or has between 2 and m children
+
+-Each node, except for the root and the leaves, has between [m/2] and m children (and hence between [m/2] - 1 and m - 1 keys)
+
+-The tree is (perfectly) balenced i.e. all its leaves are at the same level
+
+Searching in a B-tree is very similar to searching in the binary search tree, and even more so in the 2-3 tree. Starting at the root, we follow a chain of pointers to the leaf that may contain the search key. Then we search for the search key among the keys of that leaf. Note that since keys are stored in sorted order, at both parental nodes and leaves, we can use binary search if the number of keys at a node is large enough to make it worthwhile. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

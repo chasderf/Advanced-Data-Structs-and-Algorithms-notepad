@@ -1,0 +1,11 @@
+2.4 MATHEMATICAL ANALYSIS OF RECURSIVE ALGORITHMS
+
+In this section, we will see how to apply the general framework for analysis of algorithms to recursive algorithms. 
+
+General Plan for Analyzing Time Efficiency of Recursive Algorithms
+1. Decide on a parameter (or parameters) indicating an input's size.
+2. Identify the algorithm's basic operation.
+3. Check whether the number of times the basic operation is executed can vary on different inputs of the same size; if it can, the worst -case, average-case, and best-case efficiencies must be investigated separately.
+4. Set up a recurrence relation, with an appropriate initial condition, for the number of times the basic operation is executed.
+5. Solve the recurrence or at least ascertain the order of growth of its solution. 
+

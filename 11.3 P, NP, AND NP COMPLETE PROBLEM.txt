@@ -1,0 +1,88 @@
+11.3 P, NP, AND NP COMPLETE PROBLEMS
+
+DEFINITION 1 We say that an algorithm solves a problem in polynomial time
+if its worst-case time efficiency belongs to O(p(n)) where p(n) is a polynomial of the problem's input size n. (Note that since we are using big·oh notation here, problems solvable in, say, logarithmic time are solvable in polynomial time as well.) Problems that can be solved in polynomial time are called tractable, problems that cannot be solved in polynomial time are called intractable. 
+
+
+
+P AND NP PROBLEMS
+Most problems discussed in this book can be solved in polynomial time by some algorithm. They include computing the product and the greatest common divisor of two integers, sorting, searching (for a particular key in a list or for a given pattern in a text string), checking connectivity and acyclicity of a graph, finding a minimum spanning tree, and finding the shortest paths in a weighted graph. (You are invited
+to add more examples to this list.) Informally, we can think about problems that can be solved in polynomial time as the set that computer science theoreticians call P. A more formal defmition includes in P only decision problems, which are problems with yes/no answers. 
+
+DEFINITION 2 Class P is a class of decision problems that can be solved in polynomial time by (deterministic) algorithms. This class of problems is called polynomial. 
+
+Hamiltonian circuit Determine whether a given graph has a Hamiltonian
+circuit (a path that starts and ends at the same vertex and passes through all the other vertices exactly once). 
+
+Traveling salesman Find the shortest tour through n cities with known positive integer distances between them (find the shortest Hamiltonian circuit in a complete graph with positive integer weights). 
+
+Knapsack problem Find the most valuable subset of n items of given positive integer weights and values that fit into a knapsack of a given positive integer capacity. 
+
+Partition problem Given n positive integers, determine whether it is possible to partition them into two disjoint subsets with the same sum. 
+
+Bin packing Given n items whose sizes are positive rational numbers not
+larger than 1, put them into the smallest number of bins of size 1. 
+
+Graph coloring For a given graph, find its chromatic number (the smallest number of colors that need to be assigned to the graph's vertices so that no two adjacent vertices are assigned the same color). 
+
+
+Integer linear programming Find the maximum (or minimum) value of a
+linear function of several integer-valued variables subject to a finite set of constraints in the form of linear equalities and/or inequalities. 
+
+
+DEFINITION 3 A nondeterministic algorithm is a two-stage procedure that
+takes as its input an instance I of a decision problem and does the following. 
+	Nondeterministic ("guessing") stage: An arbitrary string Sis generated that can be thought of as a candidate solution to the given instance I (but may be complete gibberish as well). 
+	Deterministic ("verification") stage: A deterministic algorithm takes both I and S as its input and outputs yes if S represents a solution to instance I. (If S is not a solution to instance I, the algorithm either returns no or is allowed not to halt at alL) 
+	We say that a nondeterministic algorithm solves a decision problem if and only if for every yes instance of the problem it returns yes on some execution. (In other words, we require a nondeterministic algorithm to be capable of "guessing" a solution at least once and to be able to verify its validity. And, of course, we do not want it to ever output a yes answer on an instance for which the answer should be no.) Finally, a nondeterministic algorithm is said to be nondeterministic polynomial if the time efficiency of its verification stage is polynomial.
+
+
+DEFINITION 4 Class NP is the class of decision problems that can be solved by nondeterministic polynomial algorithms. This class of problems is called nondeterministic polynomial. 
+
+
+NP COMPLETE PROBLEMS
+Informally, an NP-complete problem is a problem in NP that is as difficult as any other problem in this class because, by definition, any other problem in N P can be reduced to it in polynomial time (shown symbolically in Figure 11.6).
+
+DEFINITION 5 A decision problem D1 is said to be polynomially reducible to a decision problem D2 if there exists a function t that transforms instances of D1 to instances of D2 such that 
+
+1. t maps all yes instances of D1 to yes instances of D2 and all no instances of Dt to no instances of D2;
+2. t is computable by a polynomial-time algorithm. 
+
+DEFINITION 6 A decision problem Dis said to be NP-complete if
+1. it belongs to class NP;
+2. every problem in NP is polynomially reducible to D, 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

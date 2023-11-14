@@ -1,0 +1,62 @@
+2.6 EMPIRICAL ANALYSIS OF ALGORITHMS
+
+In previous sections 2.3 and 2.4 we saw how algorithms, both nonrecursive and recursive can be analyzed mathematically. 
+
+GENERAL PLAN FOR EMPIRICAL ANALYSIS OF ALGORITHM TIME EFFICIENCY
+1. Understand the experiment's purpose.
+2. Decide on the efficiency metric M to be measured and the measurement unit (an operation's count vs. a time unit).
+3. Decide on characteristics of the input sample (its range, size, and so on).
+4. Prepare a program implementing the algorithm (or algorithms) for the experimentation.
+5. Generate a sample of inputs.
+6. Run the algorithm (or algorithms) on the sample's inputs and record the data observed.
+7. Analyze the data obtained. 
+
+Alternatively, you can implement one of several known algorithms for generating (pseudo )random numbers. The most widely used and thoroughly studied of such algorithms is the linear congruential method.
+ALGORITHM Random(n, m, seed, a, b)
+//Generates a sequence of 11 pseudorandom numbers according to the linear
+//congruential method
+//Input: A positive integer n and positive integer parameters m, seed, a, b
+//Output: A sequence r1, ... , r, of 11 pseudorandom integers uniformly
+II distributed among integer values between 0 and m - 1
+//Note: Pseudorandom numbers between 0 and 1 can be obtained
+II by treating the integers generated as digits after the decimal point
+r0 +--seed
+for i <-- lto n do
+ri +----(a*ri-1 +b)modm 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,44 @@
+9.1 PRIMS ALGOIRTHM
+
+DEFINITION A spanning tree of a connected graph is its connected acyclic
+subgraph (i.e., a tree) that contains all the vertices of the graph. A minimum spanning tree of a weighted connected graph is its spanning tree of the smallest weight, where the weight of a tree is defined as the sum of the weights on all its edges. The minimum spanning tree problem is the problem of finding a minimum spanning tree for a given weighted connected graph. 
+
+
+If we were to try an exhaustive-search approach to constructing a minimum spanning tree, we would face two serious obstacles. First, the number of spanning trees grows exponentially with the graph size (at least for dense graphs). Second, generating all spanning trees for a given graph is not easy; in fact, it is more difficult than finding a minimum spanning tree for a weighted graph by using one of several
+efficient algorithms available for this problem. In this section, we outline Prim's algorithm, which goes back to at least 1957
+
+
+-Move u* from the set V - Vt to the set of tree vertices Vt
+
+- For each remaining vertex u in V - Vt, that is connected to u* and the weight of the edge between u* and u, respectively
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

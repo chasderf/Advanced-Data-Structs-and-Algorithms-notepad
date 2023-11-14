@@ -1,0 +1,74 @@
+6.2 GAUSSIAN ELIMINATION
+
+uhh matrices and linear algebra
+
+ALGORITHM GaussElimination(A[1..n, 1..n], b[1.n])
+//Applies Gaussian elimirtation to matrix A of a system's coefficients,
+//augmented with vector b of the system's right-hand side values
+//Input: Matrix A[J..n, 1, .. n] and column-vector b[l..n]
+//Output: An equivalent upper-triangular matrix in place of A with the
+//corresponding right-hand side values in the (n + 1)st column
+fori +-- 1 ton do A[i, n + 1] +-- b[i] //augments the matrix
+fori +--lton-1do
+for j +-- i + 1 to n do
+fork +-- i to n + 1 do
+A[j, k] +-- A[j, k]- A[i, k] * A[j, i] / A[i, i] 
+
+
+
+
+ALGORITHM BetterGaussElimination(A[l..n, l..n ], b[l..n])
+//Implements Gaussian elimination with partial pivoting
+//Input: Matrix A[l..n, 1, .. n] and column-vector b[l..n]
+//Output: An equivalent upper-triangular matrix in place of A and the
+//corresponding right-hand side values in place of the (11 + 1)st column
+fori *--1 to 11 do A[i, 11 + 1] *-- b[i] //appends b to A as the last column
+for i *-- 1 to 11 - 1 do
+pivotrow+- i
+for j *-- i + 1 to n do
+if IA[j, i]l > JA[pivotrow,i]l pivot row *-- j
+for k *-- i to 11 + 1 do
+swap(A[i, k], A[pivotrow,k])
+for j *-- i + 1 to n do
+temp<-- A[j, i] I A[i, i]
+for k <-- i to 11 + 1 do
+A[j, k] *-- A[j, k]- A[i, k] *temp 
+
+LU Decomposition and Other Applications
+Gaussian elimination has an interesting and very useful by-product called LU decomposition of the coefficient matrix. In fact, modern commercial implementations of Gaussian elimination are based on such a decomposition rather than on the basic algorithm outlined earlier. 
+
+
+
+COMPUTING A DETERMINANT
+Another problem that can be solved by Gaussian elimination is computing a determinant. The determinant of an n-by-n matrix A, denoted det A or I AI. is a number whose value can be defined recursively as follows. If n = 1, i.e., if A consists of a single element a11, det A is equal to a11; for n > 1, det A is computed by the recursive formula.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
